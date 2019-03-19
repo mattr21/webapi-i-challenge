@@ -3,6 +3,10 @@ import './css/App.css';
 
 
 class App extends Component {
+  state = {
+    users: []
+  }
+  
   render() {
     return (
       <div className="App">
