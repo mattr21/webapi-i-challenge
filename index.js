@@ -24,7 +24,7 @@ const server = express();
 server.use(express.json());
 
 // Step 10
-// Create our requests ***********************
+// Create the requests ***********************
 
     // GET - retrieve all users
     server.get('/api/users', (req, res) => {
@@ -116,7 +116,6 @@ server.use(express.json());
                 res.status(500).json({ error: "The user information could not be modified." });
             })
     })
-
 
 // End of requests ***************************
 
