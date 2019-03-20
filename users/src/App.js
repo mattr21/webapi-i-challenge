@@ -5,14 +5,11 @@ import axios from 'axios';
 import UsersList from './components/UsersList.js';
 
 
-class App extends Component {
-  constructor() {
-    super();    
-    this.state = {
+class App extends Component { 
+    state = {
       users: [],
       error: '',
     }
-  }
 
   componentDidMount() {
     axios
