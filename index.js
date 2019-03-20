@@ -11,6 +11,10 @@
 // Add the line below to pull in express (similar to import from front end)
 const express = require('express');
 
+// STRETCH Step 1 - run 'yarn add cors' in terminal from root folder
+// STRETCH Step 2 - import cors 
+const cors = require('cors');
+
 // Step 8
 // this imports the file that has our request methods
 const db = require('./data/db.js')
@@ -22,6 +26,9 @@ const server = express();
 // Step 9
 // add middleware to make POST and PUT work
 server.use(express.json());
+
+// STRETCH Step 3 - add cors to allow front end react app to connect to the back end
+server.use(cors());
 
 // Step 10
 // Create the requests ***********************

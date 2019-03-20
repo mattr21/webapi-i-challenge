@@ -1,12 +1,28 @@
 import React, { Component } from 'react';
 import './css/App.css';
 import { Route, NavLink } from 'react-router-dom';
+import axios from 'axios';
 import UsersList from './components/UsersList.js';
 
 
 class App extends Component {
-  state = {
-    users: []
+  constructor() {
+    super();    
+    this.state = {
+      users: [],
+      error: '',
+    }
+  }
+
+  componentDidMount() {
+    axios
+      .get('http://localhost:4000/api/users')
+      .then(res => {
+        this.setState({ users: res.data })
+      })
+      .catch(error => {
+        this.setState({ error: error })
+      })
   }
   
   render() {
