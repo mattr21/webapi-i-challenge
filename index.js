@@ -128,8 +128,8 @@ server.use(cors());
 
 // Step 6
 // Tell the server to listen for traffic at a particular port
-server.listen(4000, () => {
-    console.log('API up and running on port 4k')
+server.listen(5000, () => {
+    console.log('API up and running on port 5k')
 });
 
 // Step 7
